@@ -1,4 +1,4 @@
-## build2oss
+## [build2oss](https://iout.io/open/build2oss)
 
 ## 准备条件
 
