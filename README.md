@@ -41,7 +41,7 @@ package.json 中"build2oss"："npx vuepress build docs"
 执行，\${BUCKET}改为自己 oss 的 bucket 名称
 
 ```
-docker run -i --name build2oss -v "$(pwd)/":/var/app -e DEST="docs/dist" -e BUCKET=${BUCKET} autres/build2oss
+docker run -i --name build2oss -v "$(pwd)/":/var/app -e DEST="docs/dist" -e BUCKET=${BUCKET} ioutio/build2oss
 ```
 
 ## hexo 使用方法：
@@ -60,5 +60,5 @@ package.json 中"build2oss"："npx hexo generate"
 执行，\${BUCKET}改为自己 oss 的 bucket 名称
 
 ```
-docker run -i --name build2oss -v "$(pwd)/":/var/app -e DEST="public" -e BUCKET=${BUCKET} autres/build2oss
+docker run -i --name build2oss -v "$(pwd)/":/var/app -e DEST="public" -e BUCKET=${BUCKET} ioutio/build2oss
 ```
