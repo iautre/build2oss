@@ -1,19 +1,19 @@
 FROM alpine
 #声明作者
-LABEL maintainer="a little <mo@autre.cn>"
+LABEL maintainer="a little <little@autre.cn>"
 
 #升级内核及软件
 RUN set -x \
-    ##&& sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
+    && sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories \
     && apk update \
     && apk upgrade \
     ##设置时区
-    ##&& apk --update add --no-cache tzdata \
+    && apk --update add --no-cache tzdata \
     && apk add tzdata \
     && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
-    && apk del tzdata
+    && apk del tzdata \
     ## 清除安装软件及缓存
-    ##&& rm -rf /tmp/* /var/cache/apk/*
+    && rm -rf /tmp/* /var/cache/apk/*
     
 ##设置npm国内源
 ENV NPM_REGISTRY=
